@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#player {
+    position: relative;
+    transition: .09s left;
+    animation-duration: 1.5s;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+.piso {
+    width: 100%;
+    height: 50px;
+    background-color: green;
+}
+
+.sol {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: -80px;
+    left: -80px;
+    animation-name: rotar;
+    animation-timing-function: linear;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes saltar {
+
+    0% {
+        bottom: 0;
+    }
+
+    50% {
+        bottom: 50%;
+    }
+
+    100% {
+        bottom: 0;
+    }
+
+}
+
+@keyframes rotar {
+
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
